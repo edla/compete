@@ -1,0 +1,26 @@
+=== Compete.com API Rails Plugin 0.1
+. 
+. Created by: Ed Laczynski - edltech+rails@gmail.com
+. Last Modified: July 31, 2008
+. For API information and key see:  http://developer.compete.com/
+.
+===
+
+The Compete.com API Rails plugin provides you with a communication
+class for interfacing directly with Compete.  It returns data in XML format and provides a parsing method that will return the latest Compete statistics for easy inclusion in your application.
+
+=== Usage
+
+@cp = Compete::Base.new( :compete_api_key => YOUR_COMPETE_API_KEY)
+@compete_xml = @cp.do( :url => 'www.google.com')
+p @cp.parse( @compete_xml )
+
+# {:uv_ranking=>"1", :uv_count=>"135,834,459", :month=>"06", :domain=>"google.com", :year=>"2008", :rank=>"1"}
+
+=== Questions/Comments/Feedback?
+
+I can provide limited support via e-mail at edltech+rails@gmail.com
+
+
+===============================================================
+Copyright (c) 2008 Ed Laczynski, released under the MIT license
